@@ -15,5 +15,5 @@ fun main(args: Array<String>) {
     val sP = 0.5 * (a + b + c)
     val area = sqrt(sP * (sP -a) * (sP -b) * (sP -c))
     val rArea = "%.5f".format(area)
-    println("Area =: $rArea")
+    println("Area = $rArea")
 }
