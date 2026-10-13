@@ -18,12 +18,12 @@ fun isValidTriangle(triangle: Triangle): Boolean {
     }
 }
 
-fun triangleArea( triangle: Triangle): String {
+fun triangleArea( triangle: Triangle): Double {
     val a = triangle.first
     val b = triangle.second
     val c = triangle.third
     val sP = 0.5 * (a + b + c)
     val area = sqrt(sP * (sP -a) * (sP -b) * (sP -c))
     val rArea = "%.5f".format(area)
-    return rArea
+    return rArea.toDouble()
 }
