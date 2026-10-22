@@ -1,6 +1,7 @@
 // Task 7.7.1: statistics functions
 import java.io.File
 fun median(numbers: List<Double>): Double {
+    require(numbers.isNotEmpty()){"numbers must not be empty"}
     val sortNumbers = numbers.sorted()
     val middle = sortNumbers.size / 2
     // odd list
