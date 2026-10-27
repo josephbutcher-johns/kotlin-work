@@ -1,6 +1,6 @@
 // Task 7.7.1: statistics functions
 import java.io.File
-fun median(numbers: List<Double>): Double {
+fun median(numbers: List<Float>): Float {
     require(numbers.isNotEmpty()){"numbers must not be empty"}
     val sortNumbers = numbers.sorted()
     val middle = sortNumbers.size / 2
@@ -14,7 +14,7 @@ fun median(numbers: List<Double>): Double {
     }
 }
 
-fun statistics(numbers: List<Double>) {
+fun statistics(numbers: List<Float>) {
     println("Minimum" + numbers.minOrNull())
     println("Maximum" + numbers.maxOrNull())
     println("Mean" + numbers.average())
@@ -22,6 +22,6 @@ fun statistics(numbers: List<Double>) {
 }
 
 fun main(args : Array<String>) {
-    val numbers = File(args[0]).readLines().map{ it.trim().toDouble() }
+    val numbers = File(args[0]).readLines().map{ it.trim().toFloat() }
     statistics(numbers)
 }

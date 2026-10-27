@@ -4,7 +4,6 @@
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.floats.plusOrMinus
 
 const val tolerance = 0.000001f
 
@@ -18,18 +17,18 @@ class MedianTest : FreeSpec({
     // Write four more tests here
 
     "When size = 1"{
-        median(listOf(1.0)) shouldBe 1.0
+        median(listOf(1f)) shouldBe 1f
     }
 
     "When size = 2"{
-        median(listOf(2.0, 4.0)) shouldBe 3.0
+        median(listOf(2f, 4f)) shouldBe 3f
     }
 
     "When size = 3"{
-        median(listOf(4.0, 2.0, 6.0)) shouldBe 4.0
+        median(listOf(4f, 2f, 6f)) shouldBe 4f
     }
 
     "When size = 4"{
-        median(listOf(2.0, 4.0, 8.0, 6.0)) shouldBe 5.0
+        median(listOf(2f, 4f, 8f, 6f)) shouldBe 5f
     }
 })
